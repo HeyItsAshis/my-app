@@ -1,24 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { createContext } from 'react';
+import Home from './Components/Home';
 
+export const WebContext = createContext();
+export const SettingsContext = createContext();
 function App() {
+  const settings = { theme: 'primary', font: 'Roboto' };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <WebContext.Provider value={'RohitGadget'}>
+      <SettingsContext.Provider value={settings}>
+        <Home/>
+      </SettingsContext.Provider>
+    </WebContext.Provider>
   );
 }
 
