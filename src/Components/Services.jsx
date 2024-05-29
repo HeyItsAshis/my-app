@@ -1,12 +1,13 @@
 import { useContext } from "react";
-import { WebContext, SettingsContext } from "../App";
+import { SettingsContext } from '../App';
+
+
 const Services = () => {
-    const WebCtx = useContext(WebContext);
-    const SettingsCtx = useContext(SettingsContext);
+    const SettingCtx = useContext(SettingsContext);
     return (
         <div className="text-center">
             <h1>Services</h1>
-            <p>These are our premium services from {WebCtx} using font {SettingsCtx.font}</p>
+            <p>These are our premium services from {SettingCtx.name} </p>
         </div>
     );
 }
