@@ -41,7 +41,6 @@ function App() {
 
   const handleComplete = (todo) => {
     dispatch({ type: "COMPLETE", id: todo.id });
-    dispatch({ type: "PENDING", id: todo.id });
   };
   
   return (
